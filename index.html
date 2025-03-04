@@ -35,7 +35,8 @@
         }
 
         body {
-            background-color: var(--bg-color);
+            background: var(--bg-color) url('imagenes/Fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: var(--text-color);
             min-height: 100vh;
             display: flex;
@@ -52,6 +53,14 @@
             box-shadow: var(--shadow);
             width: 100%;
             max-width: 500px;
+            position: relative;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 1.5rem;
+            max-width: 100px; /* Ajusta según el tamaño de tu logotipo */
+            height: auto;
         }
 
         h1 {
@@ -159,12 +168,17 @@
             button {
                 padding: 0.5rem;
             }
+
+            .logo {
+                max-width: 80px;
+            }
         }
     </style>
 </head>
 <body>
     <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     <main class="container">
+        <img src="imagenes/Logo-Top-Learning-Sin-Fondo.png" alt="Logo" class="logo">
         <h1>Generador de Contraseñas</h1>
         <div class="password-display" id="passwordOutput">Haz clic en Generar</div>
         <div class="strength-meter"><div id="strengthBar"></div></div>
